@@ -7,7 +7,7 @@ namespace Data_Structure_Programs
         static void Main(string[] args)
         {
             bool flag = true;
-            Console.WriteLine("Welcome to Data Structure Programs Press 1-Un Ordered List, 2-Exit");
+            Console.WriteLine("Welcome to Data Structure Programs Press 1-Un Ordered List, 2- Ordered List,3-Exit");
             int check = Convert.ToInt32(Console.ReadLine());
             switch (check)
             {
@@ -15,6 +15,11 @@ namespace Data_Structure_Programs
                     UnOrderedList.UnOrdered();
                 break;
              case 2:
+                    Console.WriteLine("Enter the Number you want to Search");
+                    int searchNum = Convert.ToInt32(Console.ReadLine());
+                    OrderedList.Ordered(searchNum);
+                    break;
+                case 3:
                     flag = false;
                     break;
             }
