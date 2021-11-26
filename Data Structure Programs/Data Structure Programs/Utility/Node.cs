@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Data_Structure_Programs
 {
-    class Node<T>
+    public class Node<T>
     {
         public T data;
         public int idata;
