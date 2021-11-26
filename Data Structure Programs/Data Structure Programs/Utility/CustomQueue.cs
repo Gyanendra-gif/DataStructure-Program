@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data_Structure_Programs.Utility
+namespace Data_Structure_Programs
 {
     class CustomQueue<T> where T : IComparable
     {
