@@ -29,6 +29,23 @@ namespace Data_Structure_Programs
             this.head = newNode;
             Console.WriteLine("Inserted the list in front " + newNode.data);
         }
+        public void Enqueue(T item)
+        {
+            Node<T> new_node = new Node<T>(item);
+            if (this.head == null)
+            {
+                this.head = new_node;
+            }
+            else
+            {
+                Node<T> temp = this.head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = new_node;
+            }
+        }
         public void Display() // This will display the Nodes
         {
             Console.WriteLine("Displaying Nodes !!!");
@@ -117,6 +134,19 @@ namespace Data_Structure_Programs
                 }
             }
         }
-
+        public string DequeuePalindromeChecker()
+        {
+            string reverseString = " ";
+            while (this.head != null)
+            {
+                if (this.head == null)
+                {
+                    Console.WriteLine("Queue is Empty");
+                }
+                reverseString = this.head.data + reverseString;
+                head = head.next;   
+            }
+            return reverseString;
+        }
     }
 }
