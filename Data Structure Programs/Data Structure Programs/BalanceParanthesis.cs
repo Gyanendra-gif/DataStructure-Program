@@ -18,11 +18,12 @@ namespace Data_Structure_Programs.Utility
                 {
                     cs.Push("(");
                 }
-                else
+                 if (result == ")")
                 {
                     cs.Pop(")");
                 }
-                if (cs.Isempty())
+            }
+             if (cs.Isempty())
                 {
                     Console.WriteLine("Balaenced Parathensis");
                 }
@@ -30,7 +31,6 @@ namespace Data_Structure_Programs.Utility
                 {
                     Console.WriteLine("Not a Balanced Parathensis");
                 }
-            }
         }
     }
 }
